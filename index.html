@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Scraper</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>X TREE</h1>
+        <form action="/scrape" method="post">
+            <label for="url">Website URL:</label>
+            <input type="text" id="url" name="url" required>
+            <label for="tag">HTML Tag:</label>
+            <input type="text" id="tag" name="tag" required>
+            <label for="class_name">Class Name (optional):</label>
+            <input type="text" id="class_name" name="class_name">
+            <label for="file_name">CSV File Name:</label>
+            <input type="text" id="file_name" name="file_name" required>
+            <input type="submit" value="SCRAPE">
+        </form>
+    </div>
+</body>
+</html>
